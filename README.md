@@ -8,9 +8,7 @@ This is a simple Quick Look plugin for viewing `.playground` files.
 
 ## Installation
 
-Download the [newest
-binary](https://github.com/Keithbsmiley/PlaygroundQuickLook/releases/download/0.1.0/PlaygroundQuickLook.qlgenerator.zip)
-from the [releases
+Download the newest binary from the [releases
 page](https://github.com/Keithbsmiley/PlaygroundQuickLook/releases)
 
 Unzip it and move `PlaygroundQuickLook.qlgenerator` to
