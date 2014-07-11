@@ -10,4 +10,23 @@
 
 @implementation CodeBlock
 
+@synthesize fileName = _fileName;
+
+- (instancetype)initWithFileName:(NSString *)fileName
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    _fileName = fileName;
+
+    return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%p Code: %@>", self, self.fileName];
+}
+
 @end

@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 smileykeith. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+#import "PlaygroundFileBlock.h"
 
-@interface DocumentationBlock : NSObject
+@interface DocumentationBlock : NSObject <PlaygroundFileBlock>
 
 @end

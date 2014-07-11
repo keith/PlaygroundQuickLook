@@ -6,3 +6,10 @@
 //  Copyright (c) 2014 smileykeith. All rights reserved.
 //
 
+@protocol PlaygroundFileBlock <NSObject>
+
+@property (nonatomic, readonly) NSString *fileName;
+
+- (instancetype)initWithFileName:(NSString *)fileName;
+
+@end
