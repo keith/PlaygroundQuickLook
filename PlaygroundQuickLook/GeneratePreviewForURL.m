@@ -1,7 +1,7 @@
-#include <CoreFoundation/CoreFoundation.h>
-#include <CoreServices/CoreServices.h>
-#include <QuickLook/QuickLook.h>
-#import <Foundation/Foundation.h>
+@import CoreFoundation;
+@import CoreServices;
+@import QuickLook;
+@import Foundation;
 #import "PlaygroundHelper.h"
 
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options);
@@ -20,7 +20,16 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     }
 
     NSURL *baseURL = (__bridge NSURL *)(url);
-    NSData *data = [PlaygroundHelper dataForPlaygroundAtURL:baseURL];
+    PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.xcplayground"]];
+    __block NSData *data = nil;
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
+            if (!error) {
+                data = [helper dataFromFiles:files relativeToURL:baseURL];
+            }
+        }];
+    });
+
     QLPreviewRequestSetDataRepresentation(preview, (__bridge CFDataRef)(data), kUTTypePlainText, NULL);
     return noErr;
 }

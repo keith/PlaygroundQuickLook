@@ -8,8 +8,13 @@
 
 @import Foundation;
 
-@interface PlaygroundHelper : NSObject
+typedef void (^PlaygroundParserCompletionBlock)(NSArray *files, NSError *error);
 
-+ (NSData *)dataForPlaygroundAtURL:(NSURL *)URL;
+@interface PlaygroundHelper : NSObject <NSXMLParserDelegate>
+
+- (instancetype)initWithFileURL:(NSURL *)fileURL;
+
+- (void)parseWithCompletionBlock:(PlaygroundParserCompletionBlock)completionBlock;
+- (NSData *)dataFromFiles:(NSArray *)files relativeToURL:(NSURL *)URL;
 
 @end

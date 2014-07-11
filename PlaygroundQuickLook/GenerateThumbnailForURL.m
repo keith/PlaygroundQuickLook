@@ -1,7 +1,7 @@
-#include <CoreFoundation/CoreFoundation.h>
-#include <CoreServices/CoreServices.h>
-#include <QuickLook/QuickLook.h>
-#import <Foundation/Foundation.h>
+@import CoreFoundation;
+@import CoreServices;
+@import QuickLook;
+@import Foundation;
 #import "PlaygroundHelper.h"
 
 OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thumbnail, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options, CGSize maxSize);
@@ -20,10 +20,17 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
     }
 
     NSURL *baseURL = (__bridge NSURL *)(url);
-    NSData *data = [PlaygroundHelper dataForPlaygroundAtURL:baseURL];
+    PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.xcplayground"]];
+    __block NSData *data = nil;
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
+            if (!error) {
+                data = [helper dataFromFiles:files relativeToURL:baseURL];
+            }
+        }];
+    });
 
     QLThumbnailRequestSetImageWithData(thumbnail, (__bridge CFDataRef)(data), NULL);
-
     return noErr;
 }
 
