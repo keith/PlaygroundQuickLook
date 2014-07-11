@@ -17,11 +17,6 @@
 		C2974D641970806900B8C4BF /* CodeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D621970806900B8C4BF /* CodeBlock.m */; };
 		C2974D671970807000B8C4BF /* DocumentationBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2974D651970807000B8C4BF /* DocumentationBlock.h */; };
 		C2974D681970807000B8C4BF /* DocumentationBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D661970807000B8C4BF /* DocumentationBlock.m */; };
-		C2974D6C1970820500B8C4BF /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C29490D51954CCF30064A4EF /* GenerateThumbnailForURL.m */; };
-		C2974D6D1970820500B8C4BF /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C29490D71954CCF30064A4EF /* GeneratePreviewForURL.m */; };
-		C2974D6E1970820500B8C4BF /* PlaygroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C29490E51954DAD60064A4EF /* PlaygroundHelper.m */; };
-		C2974D6F1970820500B8C4BF /* CodeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D621970806900B8C4BF /* CodeBlock.m */; };
-		C2974D701970820500B8C4BF /* DocumentationBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D661970807000B8C4BF /* DocumentationBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,9 +40,6 @@
 		C29490D91954CCF30064A4EF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C29490E41954DAD60064A4EF /* PlaygroundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundHelper.h; sourceTree = "<group>"; };
 		C29490E51954DAD60064A4EF /* PlaygroundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundHelper.m; sourceTree = "<group>"; };
-		C29490EC1954E0C20064A4EF /* PlaygroundQuickLookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundQuickLookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C29490EF1954E0C20064A4EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C29490F01954E0C20064A4EF /* PlaygroundQuickLookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaygroundQuickLookTests.m; sourceTree = "<group>"; };
 		C2974D6019707FFC00B8C4BF /* PlaygroundFileBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundFileBlock.h; sourceTree = "<group>"; };
 		C2974D611970806900B8C4BF /* CodeBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeBlock.h; sourceTree = "<group>"; };
 		C2974D621970806900B8C4BF /* CodeBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeBlock.m; sourceTree = "<group>"; };
@@ -63,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C29490E91954E0C20064A4EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				C29490D21954CCF30064A4EF /* PlaygroundQuickLook */,
-				C29490ED1954E0C20064A4EF /* PlaygroundQuickLookTests */,
 				C29490D11954CCF30064A4EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				C29490D01954CCF30064A4EF /* PlaygroundQuickLook.qlgenerator */,
-				C29490EC1954E0C20064A4EF /* PlaygroundQuickLookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,23 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				C29490D41954CCF30064A4EF /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C29490ED1954E0C20064A4EF /* PlaygroundQuickLookTests */ = {
-			isa = PBXGroup;
-			children = (
-				C29490F01954E0C20064A4EF /* PlaygroundQuickLookTests.m */,
-				C29490EE1954E0C20064A4EF /* Supporting Files */,
-			);
-			path = PlaygroundQuickLookTests;
-			sourceTree = "<group>";
-		};
-		C29490EE1954E0C20064A4EF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C29490EF1954E0C20064A4EF /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,23 +135,6 @@
 			productReference = C29490D01954CCF30064A4EF /* PlaygroundQuickLook.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
-		C29490EB1954E0C20064A4EF /* PlaygroundQuickLookTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C29490F21954E0C20064A4EF /* Build configuration list for PBXNativeTarget "PlaygroundQuickLookTests" */;
-			buildPhases = (
-				C29490E81954E0C20064A4EF /* Sources */,
-				C29490E91954E0C20064A4EF /* Frameworks */,
-				C29490EA1954E0C20064A4EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlaygroundQuickLookTests;
-			productName = PlaygroundQuickLookTests;
-			productReference = C29490EC1954E0C20064A4EF /* PlaygroundQuickLookTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,9 +145,6 @@
 				ORGANIZATIONNAME = smileykeith;
 				TargetAttributes = {
 					C29490CF1954CCF30064A4EF = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					C29490EB1954E0C20064A4EF = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -216,20 +162,12 @@
 			projectRoot = "";
 			targets = (
 				C29490CF1954CCF30064A4EF /* PlaygroundQuickLook */,
-				C29490EB1954E0C20064A4EF /* PlaygroundQuickLookTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C29490CE1954CCF30064A4EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C29490EA1954E0C20064A4EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,18 +187,6 @@
 				C29490D81954CCF30064A4EF /* GeneratePreviewForURL.m in Sources */,
 				C29490E71954DAD60064A4EF /* PlaygroundHelper.m in Sources */,
 				C29490DA1954CCF30064A4EF /* main.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C29490E81954E0C20064A4EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2974D6C1970820500B8C4BF /* GenerateThumbnailForURL.m in Sources */,
-				C2974D6D1970820500B8C4BF /* GeneratePreviewForURL.m in Sources */,
-				C2974D6E1970820500B8C4BF /* PlaygroundHelper.m in Sources */,
-				C2974D6F1970820500B8C4BF /* CodeBlock.m in Sources */,
-				C2974D701970820500B8C4BF /* DocumentationBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,38 +289,6 @@
 			};
 			name = Release;
 		};
-		C29490F31954E0C20064A4EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PlaygroundQuickLookTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C29490F41954E0C20064A4EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PlaygroundQuickLookTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,15 +306,6 @@
 			buildConfigurations = (
 				C29490DE1954CCF30064A4EF /* Debug */,
 				C29490DF1954CCF30064A4EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C29490F21954E0C20064A4EF /* Build configuration list for PBXNativeTarget "PlaygroundQuickLookTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C29490F31954E0C20064A4EF /* Debug */,
-				C29490F41954E0C20064A4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
