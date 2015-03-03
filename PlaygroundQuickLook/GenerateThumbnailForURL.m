@@ -23,11 +23,7 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
     PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.swift"]];
     __block NSData *data = nil;
     dispatch_sync(dispatch_get_main_queue(), ^{
-        [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
-            if (!error) {
-                data = [helper dataFromFiles:files relativeToURL:baseURL];
-            }
-        }];
+        data = [helper dataFromFile];
     });
 
     QLThumbnailRequestSetImageWithData(thumbnail, (__bridge CFDataRef)(data), NULL);
