@@ -13,10 +13,6 @@
 		C29490E11954CF270064A4EF /* PlaygroundQuickLook.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = C29490D01954CCF30064A4EF /* PlaygroundQuickLook.qlgenerator */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C29490E61954DAD60064A4EF /* PlaygroundHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C29490E41954DAD60064A4EF /* PlaygroundHelper.h */; };
 		C29490E71954DAD60064A4EF /* PlaygroundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C29490E51954DAD60064A4EF /* PlaygroundHelper.m */; };
-		C2974D631970806900B8C4BF /* CodeBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2974D611970806900B8C4BF /* CodeBlock.h */; };
-		C2974D641970806900B8C4BF /* CodeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D621970806900B8C4BF /* CodeBlock.m */; };
-		C2974D671970807000B8C4BF /* DocumentationBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2974D651970807000B8C4BF /* DocumentationBlock.h */; };
-		C2974D681970807000B8C4BF /* DocumentationBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2974D661970807000B8C4BF /* DocumentationBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,11 +36,6 @@
 		C29490D91954CCF30064A4EF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C29490E41954DAD60064A4EF /* PlaygroundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundHelper.h; sourceTree = "<group>"; };
 		C29490E51954DAD60064A4EF /* PlaygroundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundHelper.m; sourceTree = "<group>"; };
-		C2974D6019707FFC00B8C4BF /* PlaygroundFileBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundFileBlock.h; sourceTree = "<group>"; };
-		C2974D611970806900B8C4BF /* CodeBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeBlock.h; sourceTree = "<group>"; };
-		C2974D621970806900B8C4BF /* CodeBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeBlock.m; sourceTree = "<group>"; };
-		C2974D651970807000B8C4BF /* DocumentationBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentationBlock.h; sourceTree = "<group>"; };
-		C2974D661970807000B8C4BF /* DocumentationBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentationBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +72,6 @@
 				C29490D71954CCF30064A4EF /* GeneratePreviewForURL.m */,
 				C29490E41954DAD60064A4EF /* PlaygroundHelper.h */,
 				C29490E51954DAD60064A4EF /* PlaygroundHelper.m */,
-				C2974D6019707FFC00B8C4BF /* PlaygroundFileBlock.h */,
-				C2974D611970806900B8C4BF /* CodeBlock.h */,
-				C2974D621970806900B8C4BF /* CodeBlock.m */,
-				C2974D651970807000B8C4BF /* DocumentationBlock.h */,
-				C2974D661970807000B8C4BF /* DocumentationBlock.m */,
 				C29490D91954CCF30064A4EF /* main.c */,
 				C29490D31954CCF30064A4EF /* Supporting Files */,
 			);
@@ -108,8 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29490E61954DAD60064A4EF /* PlaygroundHelper.h in Headers */,
-				C2974D671970807000B8C4BF /* DocumentationBlock.h in Headers */,
-				C2974D631970806900B8C4BF /* CodeBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29490D61954CCF30064A4EF /* GenerateThumbnailForURL.m in Sources */,
-				C2974D641970806900B8C4BF /* CodeBlock.m in Sources */,
-				C2974D681970807000B8C4BF /* DocumentationBlock.m in Sources */,
 				C29490D81954CCF30064A4EF /* GeneratePreviewForURL.m in Sources */,
 				C29490E71954DAD60064A4EF /* PlaygroundHelper.m in Sources */,
 				C29490DA1954CCF30064A4EF /* main.c in Sources */,
