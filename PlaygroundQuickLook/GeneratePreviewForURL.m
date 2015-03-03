@@ -19,16 +19,21 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
         return noErr;
     }
 
-    NSURL *baseURL = (__bridge NSURL *)(url);
-    PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.xcplayground"]];
     __block NSData *data = nil;
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
-            if (!error) {
-                data = [helper dataFromFiles:files relativeToURL:baseURL];
-            }
-        }];
-    });
+    NSURL *baseURL = (__bridge NSURL *)(url);
+    NSURL *contentsSwiftURL = [baseURL URLByAppendingPathComponent:@"contents.swift"];
+    if ([contentsSwiftURL checkResourceIsReachableAndReturnError:nil]) {
+        data = [[NSData alloc] initWithContentsOfURL:contentsSwiftURL];
+    } else {
+        PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.xcplayground"]];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
+                if (!error) {
+                    data = [helper dataFromFiles:files relativeToURL:baseURL];
+                }
+            }];
+        });
+    }
 
     QLPreviewRequestSetDataRepresentation(preview, (__bridge CFDataRef)(data), kUTTypePlainText, NULL);
     return noErr;
