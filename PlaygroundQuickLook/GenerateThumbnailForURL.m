@@ -20,7 +20,7 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
     }
 
     NSURL *baseURL = (__bridge NSURL *)(url);
-    PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.xcplayground"]];
+    PlaygroundHelper *helper = [[PlaygroundHelper alloc] initWithFileURL:[baseURL URLByAppendingPathComponent:@"contents.swift"]];
     __block NSData *data = nil;
     dispatch_sync(dispatch_get_main_queue(), ^{
         [helper parseWithCompletionBlock:^(NSArray *files, NSError *error) {
